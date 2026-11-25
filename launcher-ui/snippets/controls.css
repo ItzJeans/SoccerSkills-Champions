@@ -1,0 +1,69 @@
+/* Extracted from the supplied Heaven For Death game's css/game.css. */
+#credits {
+    position: fixed;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 10000 !important;
+    pointer-events: none;
+}
+
+#credits img,
+#credits button,
+#credits a {
+    pointer-events: auto;
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+#credits img:hover,
+#credits button:hover,
+#credits a:hover {
+    transform: scale(0.85) !important;
+    filter: brightness(1.2);
+}
+
+.img-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.img-button img {
+    display: block;
+    max-height: 48px;
+    width: auto;
+}
+
+.img-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.img-button:active {
+    transform: scale(0.95);
+}
+
+#fullscreen-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    opacity: 0.5;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+#fullscreen-btn:hover {
+    opacity: 0.9;
+}
+
+/* Preserved from the reference stylesheet. */
+:fullscreen #credits,
+:-webkit-full-screen #game-controls {
+    display: none !important;
+}
